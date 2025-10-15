@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EvelynMD - Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      background: linear-gradient(180deg, #000000, #0a0a0a, #1a1a1a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      object-fit: cover;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ffffff, #cccccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #bdbdbd;
+      max-width: 600px;
+      line-height: 1.7;
+      min-height: 80px;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 30px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:hover {
+      background: #e6e6e6;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://files.catbox.moe/coky59.jpg" alt="Logo EvelynMD" />
+  <h1>EvelynMD - Assistant</h1>
+
+  <p id="typing-text"></p>
+
+  <a href="features.html" class="btn">Cihuyyyy>_<</a>
+
+  <footer>© EvelynMD 2025 - Create By KingJack</footer>
+
+  <script>
+    const text = "Hai everyone, disini website untuk memperkenalkan bot jaga group atau bot multi device kami yang bernama 'EvelynMD'. Silahkan klik tombol button di bawah ini untuk lanjut ke halaman berikut nya.";
+    let index = 0;
+    const speed = 40; // kecepatan ketikan (ms)
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById('typing-text').innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+</body>
+  </html>
