@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvelynMD - Cara Menggunakan</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle, #0d0d0d, #000);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      background: linear-gradient(90deg, #fff, #ccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+    }
+    #typedText {
+      max-width: 700px;
+      color: #eaeaea;
+      border-right: 3px solid #fff;
+      white-space: pre-wrap;
+      overflow: hidden;
+      line-height: 1.8;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .btn {
+      margin-top: 40px;
+      background: #fff;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #e6e6e6;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cara Menggunakan EvelynMD</h1>
+  <div id="typedText"></div>
+  <a href="https://chat.whatsapp.com/LjBhbku72Q5AXb6y0AuU6S?mode=wwt" class="btn">Join Group Resmi EvelynMD</a><br><br>
+  <a href="contact.html" class="btn">Lanjut ke Halaman Kontak</a>
+  <footer>© EvelynMD 2025 - Create By KingJack</footer>
+  <script>
+    const text = "Untuk melihat atau bebas bermain bot EvelynMD nya, atau mendapatkan info info tentang bot EvelynMD nya silahkan join ke group resmi nya di bawah ini :";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById('typedText').innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+      } else {
+        document.getElementById('typedText').style.borderRight = 'none';
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
